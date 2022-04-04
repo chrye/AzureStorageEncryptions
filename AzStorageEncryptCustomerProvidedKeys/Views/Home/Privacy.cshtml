@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+
+<div class="text-center">
+    <h1 class="display-6">Encryption with ... <i><b><u>Client Side Encryption Keys</u></b></i></h1>
+</div>
+
+<div class="container">
+    <form asp-action="UploadClientSideEncrypt1">
+        <div class="form-group">
+            Customer Provided Key: encryptmeonclientside
+            <input type="submit" value="Upload with ClientSideKey-1" class="btn btn-primary" /> 
+            <br />
+            <br />
+            Upload Result: <label style="color:orangered"><b>@TempData["CSE-UploadResult"]</b></label>
+
+        </div>
+    </form>
+
+    <form asp-action="DownloadClientSideEncrypt1">
+        <div class="form-group">
+            Customer Provided Key: encryptmeonclientside
+            <input type="submit" value="Download with ClientSideKey-1" class="btn btn-primary" /> 
+            <br />
+            <br />
+            Upload Result: <label style="color:orangered"><b>@TempData["CSE-DownloadResult1"]</b></label>
+
+        </div>
+    </form>
+
+    <form asp-action="Download2">
+        <div class="form-group">
+            Customer Provided Key: encryptmeonclientside-diff
+            <input type="submit" value="Download with ClientSideKey-2" class="btn btn-primary" /> 
+            <br />
+            <br />
+            Upload Result: <label style="color:orangered"><b>@TempData["CSE-DownloadResult2"]</b></label>
+
+        </div>
+    </form>
+
+
+</div>
+
+

@@ -1,0 +1,11 @@
+
+
+AzStorageEncryptCustomerProvidedKeys/bin/
+
+AzStorageEncryptCustomerProvidedKeys/obj/
+
+AzStorageEncryptCustomerProvidedKeys/File*.txt
+
+/.vs/
+
+/AzStorageEncryptCustomerProvidedKeys/ForMyselfOnly*.*

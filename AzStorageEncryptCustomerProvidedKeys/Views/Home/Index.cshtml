@@ -1,0 +1,66 @@
+﻿@model AzStorageEncryptCustomerProvidedKeys.Models.StorContent
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-6">Encryption with ... <i><b><u>Customer Provided Keys</u></b></i></h1>
+</div>
+
+<div class="container">
+    <form asp-action="UploadWithCustomerProvidedKey1">
+        @*<label id="labelCPKey">@Html.DisplayNameFor(model => model.CPKey)</label>
+
+        <div class="form-group">
+            <label asp-for="BlobId" class="control-label">Blob No: </label>
+            <input asp-for="BlobId" class="form-control" />
+            <span asp-validation-for="BlobId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="CPKey" class="control-label">Customer Provided Key: </label>
+            <input asp-for="CPKey" class="form-control" />
+            <span asp-validation-for="CPKey" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="BlobText" class="control-label">Test Data: </label>
+            <input asp-for="BlobText" class="form-control" />
+            <span asp-validation-for="BlobText" class="text-danger"></span>
+        </div>
+*@
+
+        <div class="form-group">
+            Customer Provided Key: mycustomerkey
+            <input type="submit" value="Upload with CPK-1" class="btn btn-primary" /> 
+            <br />
+            <br />
+            Upload Result: <label style="color:orangered"><b>@TempData["UploadResult"]</b></label>
+
+        </div>
+    </form>
+
+    <form asp-action="DownloadWithCustomerProvidedKey1">
+        <div class="form-group">
+            Customer Provided Key: mycustomerkey
+            <input type="submit" value="Download with CPK-1" class="btn btn-primary" /> 
+            <br />
+            <br />
+            Upload Result: <label style="color:orangered"><b>@TempData["DownloadResult1"]</b></label>
+
+        </div>
+    </form>
+
+    <form asp-action="DownloadWithCustomerProvidedKey2">
+        <div class="form-group">
+            Customer Provided Key: mycustomerkey-diff
+            <input type="submit" value="Download with CPK-2" class="btn btn-primary" /> 
+            <br />
+            <br />
+            Upload Result: <label style="color:orangered"><b>@TempData["DownloadResult2"]</b></label>
+
+        </div>
+    </form>
+
+
+</div>
